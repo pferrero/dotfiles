@@ -1,0 +1,18 @@
+# ignore root files
+/*
+
+# ignore subdirectories
+*/
+
+# ignore emacs files
+*~
+
+# exceptions
+!fish/
+!picom/
+!polybar/
+!termite/
+!i3/
+!i3status/
+!.gitignore
+!/gtk-3.0/
