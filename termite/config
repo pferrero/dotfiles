@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = liberationmono italic 14
+font = Anonymous Pro bold italic 16
 #fullscreen = true
 #icon_name = terminal
 #mouse_autohide = false
@@ -40,7 +40,53 @@ scrollback_lines = 10000
 # "off", "left" or "right"
 #scrollbar = off
 
+
+# Dracula theme for termite
+# https://github.com/dracula/termite
+# Copyright 2013-present, All rights reserved
+# Code licensed under the MIT license
+
 [colors]
+
+# special
+foreground      = #f8f8f2
+foreground_bold = #f8f8f2
+cursor          = #f8f8f2
+background      = #282a36
+
+# black
+color0  = #000000
+color8  = #4d4d4d
+
+# red
+color1  = #ff5555
+color9  = #ff6e67
+
+# green
+color2  = #50fa7b
+color10 = #5af78e
+
+# yellow
+color3  = #f1fa8c
+color11 = #f4f99d
+
+# blue
+color4  = #bd93f9
+color12 = #caa9fa
+
+# magenta
+color5  = #ff79c6
+color13 = #ff92d0
+
+# cyan
+color6  = #8be9fd
+color14 = #9aedfe
+
+# white
+color7  = #bfbfbf
+color15 = #e6e6e6
+
+#[colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
 #cursor = #dcdccc
@@ -75,54 +121,6 @@ scrollback_lines = 10000
 #color14 = #93e0e3
 #color15 = #ffffff
 
-# Dracula color scheme
-# Base16 Dracula
-# Author: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
-foreground          = #e9e9f4
-foreground_bold     = #f1f2f8
-cursor              = #f1f2f8
-cursor_foreground   = #282936
-background          = rgba(40, 41, 54)
-
-# 16 color space
-
-# Black, Gray, Silver, White
-color0  = #282936
-color8  = #4d4f68
-color7  = #e9e9f4
-color15 = #f7f7fb
-
-# Red
-color1  = #ea51b2
-color9  = #ea51b2
-
-# Green
-color2  = #00f769
-color10 = #00f769
-
-# Yellow
-color3  = #ebff87
-color11 = #ebff87
-
-# Blue
-color4  = #62d6e8
-color12 = #62d6e8
-
-# Purple
-color5  = #b45bcf
-color13 = #b45bcf
-
-# Teal
-color6  = #a1efe4
-color14 = #a1efe4
-
-# Extra colors
-color16 = #b45bcf
-color17 = #00f769
-color18 = #3a3c4e
-color19 = #626483
-color20 = #62d6e8
-color21 = #f1f2f8
 
 [hints]
 #font = Monospace 12
