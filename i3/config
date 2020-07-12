@@ -1,3 +1,5 @@
+## Author: Pablo Ferrero
+
 ### Variables ###
 # Workspaces
 set $ws1 "1:Term"
@@ -56,19 +58,21 @@ assign [class="(?i)$browser"] $ws2
 for_window [class="(?i)$calculator"] floating enable
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font pango:monospace 8
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+font pango:Anonymous Pro Bold Italic 8
 
+### Colors ###
+## Dracula
+## Author: https://github.com/dracula/dracula-theme
+# class                 border  bground text    indicator child_border
+client.focused          #6272A4 #6272A4 #F8F8F2 #6272A4   #6272A4
+client.focused_inactive #44475A #44475A #F8F8F2 #44475A   #44475A
+client.unfocused        #282A36 #282A36 #BFBFBF #282A36   #282A36
+client.urgent           #44475A #FF5555 #F8F8F2 #FF5555   #FF5555
+client.placeholder      #282A36 #282A36 #F8F8F2 #282A36   #282A36
+
+client.background       #F8F8F2
 
 ### KeyBindings ###
 # Use pactl to adjust volume in PulseAudio.
@@ -181,18 +185,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#	output HDMI1
-#	i3bar_command i3bar --transparency
-#        status_command i3status
-#	position top		# botton | top
-#	separator_symbol ":|:"
-#	strip_workspace_numbers yes
-#	#binding_mode_indicator yes
-#	colors {
-#	       focused_workspace  #000050 #156525 #ffffff
-#	}
-#}
