@@ -2,7 +2,7 @@
 
 ### Variables ###
 # Workspaces
-set $ws1 "1:Term"
+set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
@@ -18,8 +18,10 @@ set $terminal   termite
 set $calculator galculator
 # Default browser
 set $browser    brave
+# Default file manager
+set $fileman    thunar
 # Default background
-set $background $HOME/backgrounds/tesla2.jpg
+set $background $HOME/backgrounds/mountains.jpg
 # Brightness key codes
 set $brightDown 232
 set $brightUp   233
@@ -54,6 +56,8 @@ gaps outer 4
 smart_borders on
 # Make browser always open in workspace 2
 assign [class="(?i)$browser"] $ws2
+# Make file manager always open in workspace 5
+assign [class="(?i)$fileman"] $ws5
 # Make calculator always open in floating mode
 for_window [class="(?i)$calculator"] floating enable
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -145,6 +149,9 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+
+# back and forth 
+bindsym $mod+Tab workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
