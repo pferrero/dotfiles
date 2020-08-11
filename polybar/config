@@ -26,6 +26,7 @@ foreground-alt = #555
 primary = #99ff1a1a
 secondary = #e60053
 alert = #bd2c40
+indicator = #9f78e1
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -58,7 +59,7 @@ font-2 = FontAwesome5Free:style=Solid;3
 ;modules-left = bspwm i3
 modules-center = i3
 modules-left = filesystem memory cpu temperature battery
-modules-right = pulseaudio date
+modules-right = backlight-acpi pulseaudio date
 tray-position = right
 tray-padding = 2
 ;tray-background = #0063ff
@@ -157,7 +158,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.indicator}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
@@ -197,7 +198,7 @@ type = internal/xbacklight
 ;output = eDP1
 format = <label> <bar>
 ;label = BL
-label = %percentage%
+label =  %percentage%%
 
 bar-width = 10
 bar-indicator = |
@@ -205,7 +206,7 @@ bar-indicator-foreground = #fff
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
-bar-fill-foreground = #9f78e1
+bar-fill-foreground = ${colors.indicator}
 bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
@@ -289,7 +290,7 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = AUDIO MUTED
@@ -343,23 +344,30 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/battery]
 type = internal/battery
 battery = BAT1
-adapter = ADP1
+adapter = ACAD
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging = <ramp-capacity> <label-discharging>
+;format-discharging-underline = ${self.format-charging-underline}
+
+label-discharging = %percentage%%
+label-full =  100%
+
+bar-capacity-width = 10
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+;ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -367,11 +375,11 @@ animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
+animation-discharging-0 = 1
+animation-discharging-1 = 2
+animation-discharging-2 = 3
+;animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 2000
 
 [module/temperature]
 type = internal/temperature
