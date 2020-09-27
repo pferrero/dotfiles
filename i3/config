@@ -99,8 +99,8 @@ bindsym $mod+b exec $browser
 bindsym $mod+Return exec $terminal
 # kill focused window
 bindsym $mod+q kill
-# start dmenu
-bindsym $mod+d exec dmenu_run -h 32 -fn Monospace-12:bold
+# start menu
+bindsym $mod+d exec rofi -show run
 
 # Focus control
 bindsym $mod+Left focus left
