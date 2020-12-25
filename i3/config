@@ -32,7 +32,7 @@ set $screen     107
 # Execute terminal on startup
 #exec $terminal
 # Background image
-exec --no-startup-id feh --bg-scale $background
+exec --no-startup-id xwallpaper --output eDP-1 --center $background
 # Compositor (para fondos transparentes)
 exec --no-startup-id picom -b
 # Teclado numérico
