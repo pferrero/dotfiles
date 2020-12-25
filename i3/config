@@ -100,7 +100,7 @@ bindsym $mod+Return exec $terminal
 # kill focused window
 bindsym $mod+q kill
 # start menu
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show run -theme Pop-Dark
 
 # Focus control
 bindsym $mod+Left focus left
