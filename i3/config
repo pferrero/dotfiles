@@ -29,8 +29,8 @@ set $brightUp   233
 set $screen     107
 
 ### Startup ###
-# Execute terminal on startup
-#exec $terminal
+# Set the 2 keyboard layout I use and the toggle shortcut
+exec setxkbmap -layout latam,es -option grp:shifts_toggle
 # Background image
 exec --no-startup-id xwallpaper --output eDP-1 --center $background
 # Compositor (para fondos transparentes)

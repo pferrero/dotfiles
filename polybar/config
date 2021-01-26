@@ -59,7 +59,7 @@ font-2 = FontAwesome5Free:style=Solid;3
 ;modules-left = bspwm i3
 modules-center = i3
 modules-left = filesystem memory cpu temperature battery
-modules-right = backlight-acpi pulseaudio date
+modules-right = backlight-acpi pulseaudio xkeyboard date
 tray-position = right
 ;tray-padding = 2
 ;tray-background = #0063ff
@@ -88,15 +88,15 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+;format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+;label-layout-underline = ${colors.secondary}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+label-indicator-background = ${colors.indicator}
+;label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
