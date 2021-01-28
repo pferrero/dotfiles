@@ -52,7 +52,7 @@ title_align center		# left | center | right
 # Gaps
 for_window [class=.*] border pixel 2
 gaps inner 4
-gaps outer 4
+gaps outer 0
 smart_borders on
 # Make browser always open in workspace 2
 assign [class="(?i)$browser"] $ws2

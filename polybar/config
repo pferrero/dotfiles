@@ -34,39 +34,48 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
+
+; Rounded corners
+radius = 0.0
 fixed-center = true
 
 background = ${colors.background}
 ;foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 4
 line-color = #f00
 
-border-size = 4
+; Borders of the bar. Top and bottom border are
+; added to the height while left and right are
+; substracted to the width.
+border-size = 0
 border-color = #00000000
 
-padding-left = 0
-padding-right = 2
+; Spaces left and right of the bar
+padding = 0
+;padding-left = 0
+;padding-right = 2
 
-module-margin-left = 1
-module-margin-right = 2
+; Spaces between the modules of the bar
+module-margin = 2
+;module-margin-left = 1
+;module-margin-right = 2
 
 font-0 = LiberationSerif:style=Bold:size=10;1
 font-1 = FontAwesome5Brands:style=Regular;2
 font-2 = FontAwesome5Free:style=Solid;3
 
-;modules-left = bspwm i3
 modules-center = i3
 modules-left = filesystem memory cpu temperature battery
 modules-right = backlight-acpi pulseaudio xkeyboard date
+
+; Position of the tray icons
 tray-position = right
 ;tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
-wm-restack = i3
-
+;wm-restack = i3
 ;override-redirect = true
 
 ;scroll-up = bspwm-desknext
