@@ -21,7 +21,7 @@ set $browser    brave
 # Default file manager
 set $fileman    thunar
 # Default background
-set $background $HOME/backgrounds/mountains.jpg
+set $background $HOME/Pictures/backgrounds/code.jpg
 # Brightness key codes
 set $brightDown 232
 set $brightUp   233

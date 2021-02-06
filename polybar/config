@@ -18,10 +18,10 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #2222
+background = ${xrdb:background:#2222}
 background-alt = #a444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+foreground = ${xrdb:foreground:#dfdfdf}
 foreground-alt = #555
 primary = #99ff1a1a
 secondary = #e60053
@@ -229,15 +229,15 @@ card = intel_backlight
 type = internal/cpu
 interval = 10
 format-prefix = "  "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.foreground}
 ;format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 10
-format-prefix = "  "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "  "
+format-prefix-foreground = ${colors.foreground}
 ;format-underline = #4bffdc
 label = %percentage_used%%
 
