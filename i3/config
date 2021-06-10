@@ -101,6 +101,8 @@ bindsym $mod+Return exec $terminal
 bindsym $mod+q kill
 # start menu
 bindsym $mod+d exec rofi -show drun
+# start passmenu
+bindsym $mod+p exec passmenu
 
 # Focus control
 bindsym $mod+Left focus left
