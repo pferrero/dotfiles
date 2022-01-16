@@ -152,16 +152,6 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 
-# switch to workspace when using dvorak layout
-bindsym Group3 $mod+h workspace $ws1
-bindsym Group3 $mod+t workspace $ws2
-bindsym Group3 $mod+n workspace $ws3
-bindsym Group3 $mod+s workspace $ws4
-bindsym Group3 $mod+g workspace $ws5
-bindsym Group3 $mod+c workspace $ws6
-bindsym Group3 $mod+r workspace $ws7
-bindsym Group3 $mod+l workspace $ws8
-
 # back and forth 
 bindsym $mod+Tab workspace back_and_forth
 
@@ -175,15 +165,8 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 
-# move focused container to workspace when using dvorak
-bindsym Group3 $mod+Shift+h move container to workspace $ws1
-bindsym Group3 $mod+Shift+t move container to workspace $ws2
-bindsym Group3 $mod+Shift+n move container to workspace $ws3
-bindsym Group3 $mod+Shift+s move container to workspace $ws4
-bindsym Group3 $mod+Shift+g move container to workspace $ws5
-bindsym Group3 $mod+Shift+c move container to workspace $ws6
-bindsym Group3 $mod+Shift+r move container to workspace $ws7
-bindsym Group3 $mod+Shift+l move container to workspace $ws8
+# bring terminal to workspace 3 (the code editor terminal)
+bindsym $mod+Shift+Return [class="(?i)$terminal"] move workspace current
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
