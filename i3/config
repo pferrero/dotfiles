@@ -21,7 +21,7 @@ set $browser    brave
 # Default file manager
 set $fileman    thunar
 # Default background
-set $background $HOME/Pictures/backgrounds/will.jpg
+set $background $HOME/Pictures/backgrounds/aus.jpg
 # Brightness key codes
 set $brightDown 232
 set $brightUp   233
@@ -32,7 +32,7 @@ set $screen     107
 # Set the 2 keyboard layout I use and the toggle shortcut
 exec_always --no-startup-id setxkbmap -layout us -variant colemak# -option grp:shifts_toggle
 # Background image
-exec --no-startup-id xwallpaper --center $background
+exec --no-startup-id xwallpaper --stretch $background
 # Compositor (para fondos transparentes)
 exec --no-startup-id picom -b
 # Teclado numérico

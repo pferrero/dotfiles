@@ -42,8 +42,8 @@ background = ${colors.background}
 module-margin = 2
 ; Fonts
 font-0 = LiberationSerif:style=Bold:size=10;1
-font-1 = FontAwesome5Brands:style=Regular;2
-font-2 = FontAwesome5Free:style=Solid;3
+font-1 = FontAwesome6Brands:style=Regular;2
+font-2 = FontAwesome6Free:style=Solid;3
 ; Modules
 modules-left = filesystem memory cpu temperature battery
 modules-right = bitcoin backlight-acpi pulseaudio xkeyboard date
